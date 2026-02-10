@@ -99,7 +99,7 @@ html, body {
     left: 12%;
     bottom: -6px;
 
-    width: 0;
+    width: 76%;
     height: 2px;
     background: white;
 
@@ -134,7 +134,7 @@ html, body {
 
 .right .intro {
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 10%;
     
     color: white;
@@ -150,6 +150,7 @@ html, body {
     font-size: 1.2rem;
     max-width: 400px;
     margin: 20px auto;
+
     font-family: 'Courier New', Courier, monospace;
 }.btn {
     display: inline-block;
@@ -172,3 +173,57 @@ html, body {
     transform: scale(1.05);             /* slight zoom */
     box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* optional depth */
 }
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 100px; /* spacing around section */
+    gap: 60px;            /* space between left & right */
+    flex-wrap: wrap;       /* responsive on small screens */
+    background: #0a0a0a;  /* optional dark background */
+    color: white;
+}
+
+.feature-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-left .feature-img {
+    max-width: 100%;
+    border-radius: 70px;
+    transform: rotate(-2deg); /* slight slant */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.feature-right {
+    flex: 1;
+    max-width: 500px;
+}
+
+.p{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: garamind;
+    font-weight: bold;
+}
+
+.feature-right p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+.right.p1{
+    font-size: 1.2rem;
+    margin-bottom:25px;
+    line-height:1.5;
+    max-width: 400px;
+    margin: 20px auto;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex
+
+}
+
