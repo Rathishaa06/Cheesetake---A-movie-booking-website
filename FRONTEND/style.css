@@ -113,9 +113,7 @@ html, body {
     border-radius: 20px;
     color: black;
 }
-.nav-links a:hover::after {
-    width: 76%;
-}
+
 .nav-btn {
     padding: 10px 22px;
     border: none;
