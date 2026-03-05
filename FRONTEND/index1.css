@@ -1,57 +1,160 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    background-color: black;
-    font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: #f4f4f4;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Top Left Circle */
+body::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: black;
+    border-radius: 50%;
+    top: -120px;
+    left: -120px;
+    z-index: 0;
+}
+
+/* Bottom Right Circle */
+body::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: black;
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+    z-index: 0;
+}
+
+/* Keep form above circles */
 .login-container {
-    background: #111;
-    padding: 40px;
-    border-radius: 15px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
 }
-
-h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-input {
+/* ===== FORM CONTAINER ===== */
+.login-container {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* ===== FORM BOX ===== */
+.form-box {
+    width: 380px;
+    padding: 45px 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    transition: 0.4s ease;
+}
+
+.form-box:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== TITLE ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: black;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ===== INPUT FIELD ===== */
+.input-field {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 30px;
+    padding: 12px 18px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+/* BLACK ICONS (always black) */
+.input-field i {
+    font-size: 16px;
+    color: black;
+    margin-right: 12px;
+}
+
+/* Input */
+.input-field input {
     border: none;
     outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 15px;
 }
 
+/* Focus effect */
+.input-field:focus-within {
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* ===== BUTTON ===== */
 button {
-    width: 100%;
+    margin-top: 10px;
     padding: 12px;
-    background: red;
-    color: white;
+    border-radius: 30px;
     border: none;
-    border-radius: 8px;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background: darkred;
+    background: #333;
     transform: scale(1.05);
 }
 
+button:active {
+    transform: scale(0.95);
+}
+
+/* ===== SIGNUP LINK ===== */
 .signup-link {
-    color: white;
-    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
 }
 
 .signup-link a {
-    color: red;
     text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
