@@ -1,0 +1,210 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    
+    background: black;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #aaa;
+}
+
+.nav-links span {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* ================= HERO SLIDER ================= */
+
+.hero-slider {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+    /* 🔥 center video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* IMAGE (full background) */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.movie-card img{
+   width: 260px;
+    
+    object-fit: cover;
+}
+
+
+
+/* Gradient overlay */
+.hero-slider::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, black, transparent);
+}
+
+/* Text */
+.slide-content {
+    position: absolute;
+    bottom: 80px;
+    left: 60px;
+    z-index: 2;
+}
+
+.slide-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.slide-content p {
+    max-width: 500px;
+    opacity: 0.8;
+}
+
+/* ================= MOVIE ROWS ================= */
+
+.genre-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.genre-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Horizontal scroll */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* MOVIE CARD */
+.movie-card {
+    
+    padding: 20px;
+    width: 300px;        /* 🔥 control exact size */
+    flex: 0 0 auto;      
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+/* Card content */
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.rating {
+    color: gold;
+}
+
+.description {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 10px 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.price-tag {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+}
+
+.time-slot {
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

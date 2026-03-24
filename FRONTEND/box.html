@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese Take | Premium Cinema</title>
+    <link rel="stylesheet" href="box.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">cheese<span>take</span></div>
+        <div class="nav-links">
+            <span>Movies</span>
+            <span>Anime</span>
+            <span>Cinemas</span>
+        </div>
+    </nav> 
+    
+    
+ 
+
+</div><!-- Genre: Trending -->
+    <section class="genre-section" style="margin-top: 2rem;">
+        <h2 class="genre-title">Trending Now</h2>
+        <div class="gallery-container">
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="croods.jpg">
+                <br>
+                <br>
+                <h3>Dune: Part Two</h3>
+                
+                <div class="movie-meta"><span>Sci-Fi</span><span class="rating">★ 4.9</span></div>
+                <p class="description">The mythic journey of Paul Atreides continues.</p>
+                <div class="price-tag">$18.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="gd.jpg">
+                <h3>The Batman</h3>
+                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.5</span></div>
+                <p class="description">Unmasking corruption in Gotham City.</p>
+                <div class="price-tag">$15.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">   
+
+                <img src="luca.jpg">
+                             <h3>Oppenheimer</h3>
+                <div class="movie-meta"><span>Drama</span><span class="rating">★ 4.7</span></div>
+                <p class="description">The pulse-pounding paradox of the atomic bomb.</p>
+                <div class="price-tag">$16.00</div>
+            </div>
+             <div class="movie-card" onclick="toggleModal()">   
+
+                <img src="coco.jpg">
+                             <h3>Oppenheimer</h3>
+                <div class="movie-meta"><span>Drama</span><span class="rating">★ 4.7</span></div>
+                <p class="description">The pulse-pounding paradox of the atomic bomb.</p>
+                <div class="price-tag">$16.00</div>
+            </div>
+             <div class="movie-card" onclick="toggleModal()">   
+
+                <img src="mh.jpg">
+                             <h3>Oppenheimer</h3>
+                <div class="movie-meta"><span>Drama</span><span class="rating">★ 4.7</span></div>
+                <p class="description">The pulse-pounding paradox of the atomic bomb.</p>
+                <div class="price-tag">$16.00</div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Genre: Anime -->
+    <section class="genre-section">        <h2 class="genre-title">Anime Spotlight</h2>
+        <div class="gallery-container">            <div class="movie-card" onclick="toggleModal()">
+
+            <img src="images/ds.jpg">
+                <h3>Demon Slayer</h3>
+                <div class="movie-meta"><span>Action • M</span><span class="rating">★ 4.9</span></div>
+                <p class="description">To the Hashira Training. Tanjiro visits the Stone Hashira.</p>
+                <div class="price-tag">$14.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="images/jjk.jpg">
+                <h3>Jujutsu Kaisen 0</h3>
+                <div class="movie-meta"><span>Supernatural</span><span class="rating">★ 4.8</span></div>
+                <p class="description">Yuta Okkotsu gains control of an extremely powerful cursed spirit.</p>
+                <div class="price-tag">$14.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="images/yn.jpg">
+                <h3>One Piece: Red</h3>
+                <div class="movie-meta"><span>Adventure</span><span class="rating">★ 4.7</span></div>
+                <p class="description">Uta — the most beloved singer in the world — reveals her identity.</p>
+                <div class="price-tag">$13.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="images/suzume.jpg">
+                <h3>Suzume</h3>
+                <div class="movie-meta"><span>Fantasy</span><span class="rating">★ 4.9</span></div>
+                <p class="description">A modern action-adventure road story across Japan.</p>
+                <div class="price-tag">$15.00</div>
+            </div>
+        </div>    </section>
+
+    <!-- Genre: Sci-Fi -->
+    <section class="genre-section">
+        <h2 class="genre-title">Sci-Fi Classics</h2>
+        <div class="gallery-container">
+            <div class="movie-card" onclick="toggleModal()">
+                <h3>Interstellar</h3>
+                <div class="movie-meta"><span>Adventure</span><span class="rating">★ 4.9</span></div>                <p class="description">A team of explorers travel through a wormhole.</p>
+                <div class="price-tag">$12.00</div>
+            </div>
+            <div class="movie-card" onclick="toggleModal()">
+                <h3>Inception</h3>
+                <div class="movie-meta"><span>Sci-Fi</span><span class="rating">★ 4.8</span></div>
+                <p class="description">Stealing corporate secrets through dream-sharing.</p>
+                <div class="price-tag">$12.00</div>            </div>
+            <div class="movie-card" onclick="toggleModal()">
+                <h3>Tenet</h3>                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
+                <p class="description">Time inversion in a fight for the world's survival.</p>                <div class="price-tag">$13.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal (Remains the same) -->
+    <div class="modal-overlay" id="bookingModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h2>Book Tickets</h2>
+            <div class="show-times">
+                <div class="time-slot">10:30 AM</div>
+                <div class="time-slot">02:15 PM</div>
+                <div class="time-slot">06:00 PM</div>
+                <div class="time-slot">09:45 PM</div>
+            </div>
+            <div class="seat-pricing">
+                <div class="seat-row"><span>Standard</span><span>$12.00</span></div>
+                <div class="seat-row"><span>VIP Lounge</span><span>$25.00</span></div>
+            </div>
+            <button onclick="toggleModal()" style="margin-top: 2rem; background: #fff; border: none; padding: 12px; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer;">Confirm Booking</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() { document.getElementById('bookingModal').classList.toggle('active'); }
+        function closeModal(e) { if(e.target.id === 'bookingModal') toggleModal(); }
+    </script>
+</body>
+</html>
