@@ -25,7 +25,7 @@
         <div class="intro">
      
         <p class="p1">Grab your popcorn, pick your seats, and dive into the world of movies like never before.</p>
-        <a href="#get-started" class="btn">Login/signup</a><br>
+        <a href="index1.html" class="btn" onclick="slidePage(event)">Login/signup</a><br>
         <br>
         <br>
         <p>From birthdays to corporate events, our exclusive screening rooms let you enjoy movies in style.  
@@ -51,7 +51,17 @@ Get detailed showtimes, trailers, and ratings all in one place</p>
         <a href="#" class="btn">Book Now</a>
     </div>
 </section>
+<script>
+function slidePage(e) {
+    e.preventDefault(); // stop instant jump
 
+    document.body.classList.add("slide-out");
+
+    setTimeout(() => {
+        window.location = e.target.href;
+    }, 500); // must match CSS transition time
+}
+</script>
     
     
 </body>

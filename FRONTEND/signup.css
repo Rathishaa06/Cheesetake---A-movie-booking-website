@@ -6,17 +6,14 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* ===== PAGE ANIMATION ===== */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4;
-    position: relative;
-    overflow: hidden;
-}
-/* ===== PAGE LOAD (slide in) ===== */
-body {
+    background: #0f0f0f;
+
     transform: translateX(60px);
     opacity: 0;
     animation: slideIn 0.6s ease forwards;
@@ -29,71 +26,38 @@ body {
     }
 }
 
-/* ===== PAGE EXIT (slide out) ===== */
+/* Slide out */
 .slide-out {
     transform: translateX(-100%);
     opacity: 0;
     transition: 0.5s ease;
 }
-/* Top Left Circle */
-body::before {
-    content: "";
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    background: black;
-    border-radius: 50%;
-    top: -120px;
-    left: -120px;
-    z-index: 0;
-}
 
-/* Bottom Right Circle */
-body::after {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: black;
-    border-radius: 50%;
-    bottom: -100px;
-    right: -100px;
-    z-index: 0;
-}
-
-/* Keep form above circles */
-.login-container {
-    position: relative;
-    z-index: 1;
-}
-/* ===== FORM CONTAINER ===== */
-.login-container {
+/* ===== CONTAINER ===== */
+.signup-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 1;
 }
 
 /* ===== FORM BOX ===== */
 .form-box {
-    width: 380px;
+    width: 400px;
     padding: 45px 35px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
     transition: 0.4s ease;
 }
 
 .form-box:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 }
 
 /* ===== TITLE ===== */
 h2 {
     text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
+    margin-bottom: 25px;
     color: black;
 }
 
@@ -101,40 +65,38 @@ h2 {
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 /* ===== INPUT FIELD ===== */
 .input-field {
     display: flex;
     align-items: center;
-    background: #f7f7f7;
+    background: #f2f2f2;
     border-radius: 30px;
     padding: 12px 18px;
     border: 2px solid transparent;
     transition: 0.3s ease;
 }
 
-/* BLACK ICONS (always black) */
+/* ICON */
 .input-field i {
-    font-size: 16px;
     color: black;
     margin-right: 12px;
 }
 
-/* Input */
+/* INPUT */
 .input-field input {
     border: none;
     outline: none;
     background: transparent;
     flex: 1;
-    font-size: 15px;
 }
 
-/* Focus effect */
+/* Focus */
 .input-field:focus-within {
     border: 2px solid black;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* ===== BUTTON ===== */
@@ -145,10 +107,9 @@ button {
     border: none;
     background: black;
     color: white;
-    font-size: 15px;
-    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -156,24 +117,19 @@ button:hover {
     transform: scale(1.05);
 }
 
-button:active {
-    transform: scale(0.95);
-}
-
-/* ===== SIGNUP LINK ===== */
-.signup-link {
+/* ===== LOGIN LINK ===== */
+.login-link {
     text-align: center;
+    margin-top: 10px;
     font-size: 14px;
-    margin-top: 12px;
 }
 
-.signup-link a {
-    text-decoration: none;
+.login-link a {
     color: black;
-    font-weight: 600;
-    transition: 0.3s;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.signup-link a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
