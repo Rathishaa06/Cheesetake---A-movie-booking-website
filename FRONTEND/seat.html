@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineNoir | Select Your Seats</title>
+    <link rel="stylesheet" href="seat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left" onclick="window.history.back()" style="cursor: pointer;">
+            <i data-lucide="chevron-left"></i>
+            <span>Back to Movie</span>
+        </div>
+        <div class="logo">CHEESE<span>TAKE</span></div>
+        <div class="nav-right">
+            <span class="user-id">ID: 48AZ-99</span>
+        </div>
+    </nav>
+
+    <main class="booking-container">
+        <!-- Screen Area -->
+        <div class="screen-container">
+            <div class="screen"></div>
+            <p class="screen-text">SCREEN THIS WAY</p>
+        </div>
+
+        <!-- Seat Grid Layout -->
+        <div class="theatre-layout" id="seatContainer">
+            <!-- Dynamically generated via JS -->
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+            <div class="item"><div class="seat available"></div> <span>Available</span></div>
+            <div class="item"><div class="seat legend-selected"></div> <span>Selected</span></div> <!-- ✅ changed to legend-selected -->
+            <div class="item"><div class="seat occupied"></div> <span>Occupied</span></div>
+        </div>
+
+        <!-- Bottom Selection Info -->
+        <div class="selection-panel glass">
+            <div class="info-group">
+                <div class="label">Tickets</div>
+                <div class="value" id="count">0 Seats</div>
+            </div>
+            <div class="info-group">
+                <div class="label">Total Price</div>
+                <div class="value" id="total">₹0.00</div>
+            </div>
+            <div class="action-group">
+                <button class="btn btn-primary" onclick="confirmSeats()">Confirm Selection</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="seat.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

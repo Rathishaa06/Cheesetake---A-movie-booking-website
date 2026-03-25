@@ -1,0 +1,80 @@
+:root {
+    --black: #080808;
+    --white: #ffffff;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --seat-available: #2a2a2a;
+    --seat-occupied: #151515;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo { font-weight: 800; letter-spacing: 2px; }
+.logo span { font-weight: 300; opacity: 0.5; }
+
+.booking-container {
+    padding: 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen-container { perspective: 1000px; width: 100%; max-width: 600px; margin-bottom: 3rem; }
+.screen {
+    height: 10px; background: #fff; width: 100%; border-radius: 50%;
+    transform: rotateX(-45deg);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+.screen-text { text-align: center; font-size: 0.7rem; letter-spacing: 4px; opacity: 0.3; margin-top: 1rem; }
+
+.theatre-layout { display: flex; flex-direction: column; gap: 12px; margin-bottom: 3rem; }
+.row { display: flex; gap: 10px; align-items: center; }
+.row-label { width: 20px; font-size: 0.7rem; opacity: 0.4; font-weight: 700; }
+
+.seat {
+    width: 30px; height: 30px; background: var(--seat-available);
+    border-radius: 8px; cursor: pointer; border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.seat.occupied { background: var(--seat-occupied); cursor: not-allowed; opacity: 0.3; background-color: rgb(248, 255, 220);}
+.seat.selected { background: #fff; transform: scale(1.1); box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+.seat-group {
+    display: flex;
+    gap: 10px;
+}
+.seat.legend-selected{
+    background-color: #fff;
+}
+
+.seat-group:not(:last-child) {
+    margin-right: 25px; /* aisle gap */
+}
+.legend { display: flex; gap: 2rem; margin-top: 2rem; }
+.legend .item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; opacity: 0.7; }
+
+.selection-panel {
+    position: fixed; bottom: 2rem; width: 90%; max-width: 800px;
+    background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border); border-radius: 20px;
+    padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center;
+}
+
+.btn-primary {
+    background: #fff; color: #000; border: none; padding: 0.8rem 1.5rem;
+    border-radius: 12px; font-weight: 700; cursor: pointer;
+}

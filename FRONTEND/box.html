@@ -73,8 +73,10 @@
     </section>
 
     <!-- Genre: Anime -->
-    <section class="genre-section">        <h2 class="genre-title">Anime Spotlight</h2>
-        <div class="gallery-container">            <div class="movie-card" onclick="toggleModal()">
+    <section class="genre-section">       
+         <h2 class="genre-title">Anime Spotlight</h2>
+        <div class="gallery-container">            
+            <div class="movie-card" onclick="toggleModal()">
 
             <img src="images/ds.jpg">
                 <h3>Demon Slayer</h3>
@@ -106,26 +108,72 @@
                 <p class="description">A modern action-adventure road story across Japan.</p>
                 <div class="price-tag">$15.00</div>
             </div>
-        </div>    </section>
+
+            <div class="movie-card" onclick="toggleModal()">
+
+                <img src="images/sf.png">
+                <h3>Jujutsu Kaisen 0</h3>
+                <div class="movie-meta"><span>Supernatural</span><span class="rating">★ 4.8</span></div>
+                <p class="description">Yuta Okkotsu gains control of an extremely powerful cursed spirit.</p>
+                <div class="price-tag">$14.00</div>
+            </div>
+
+
+             <div class="movie-card" onclick="toggleModal()">
+
+                <img src="images/onward.jpeg">
+                <h3>Suzume</h3>
+                <div class="movie-meta"><span>Fantasy</span><span class="rating">★ 4.9</span></div>
+                <p class="description">A modern action-adventure road story across Japan.</p>
+                <div class="price-tag">$15.00</div>
+            </div>
+        </div>   
+     </section>
 
     <!-- Genre: Sci-Fi -->
     <section class="genre-section">
         <h2 class="genre-title">Sci-Fi Classics</h2>
         <div class="gallery-container">
             <div class="movie-card" onclick="toggleModal()">
+                <img src="images/in.jpg">
                 <h3>Interstellar</h3>
+                
                 <div class="movie-meta"><span>Adventure</span><span class="rating">★ 4.9</span></div>                <p class="description">A team of explorers travel through a wormhole.</p>
                 <div class="price-tag">$12.00</div>
             </div>
             <div class="movie-card" onclick="toggleModal()">
+                <img src="images/martian.jpg">
                 <h3>Inception</h3>
                 <div class="movie-meta"><span>Sci-Fi</span><span class="rating">★ 4.8</span></div>
                 <p class="description">Stealing corporate secrets through dream-sharing.</p>
                 <div class="price-tag">$12.00</div>            </div>
             <div class="movie-card" onclick="toggleModal()">
-                <h3>Tenet</h3>                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
+                <img src="images/mr.jpeg">
+                <h3>Tenet</h3>                
+                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
                 <p class="description">Time inversion in a fight for the world's survival.</p>                <div class="price-tag">$13.00</div>
             </div>
+            <div class="movie-card" onclick="toggleModal()">
+                <img src="images/dune.jpg">
+                <h3>Tenet</h3>                
+                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
+                <p class="description">Time inversion in a fight for the world's survival.</p>                <div class="price-tag">$13.00</div>
+            </div>
+
+            <div class="movie-card" onclick="toggleModal()">
+                <img src="images/avn.webp">
+                <h3>Tenet</h3>                
+                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
+                <p class="description">Time inversion in a fight for the world's survival.</p>                <div class="price-tag">$13.00</div>
+            </div>
+
+            <div class="movie-card" onclick="toggleModal()">
+                <img src="images/rocketry.jpg">
+                <h3>Tenet</h3>                
+                <div class="movie-meta"><span>Action</span><span class="rating">★ 4.2</span></div>
+                <p class="description">Time inversion in a fight for the world's survival.</p>                <div class="price-tag">$13.00</div>
+            </div>
+
         </div>
     </section>
 
@@ -133,23 +181,28 @@
     <div class="modal-overlay" id="bookingModal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <h2>Book Tickets</h2>
+            <br><br>
             <div class="show-times">
                 <div class="time-slot">10:30 AM</div>
                 <div class="time-slot">02:15 PM</div>
                 <div class="time-slot">06:00 PM</div>
                 <div class="time-slot">09:45 PM</div>
             </div>
+            <br>
             <div class="seat-pricing">
                 <div class="seat-row"><span>Standard</span><span>$12.00</span></div>
                 <div class="seat-row"><span>VIP Lounge</span><span>$25.00</span></div>
             </div>
-            <button onclick="toggleModal()" style="margin-top: 2rem; background: #fff; border: none; padding: 12px; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer;">Confirm Booking</button>
+            <button onclick="goToBooking()" style="margin-top: 2rem; background: #fff; border: none; padding: 12px; border-radius: 8px; font-weight: bold; width: 100%; cursor: pointer;">Confirm Booking</button>
         </div>
     </div>
 
     <script>
         function toggleModal() { document.getElementById('bookingModal').classList.toggle('active'); }
         function closeModal(e) { if(e.target.id === 'bookingModal') toggleModal(); }
+         function goToBooking() {
+        window.location.href = "seat.html"; 
+    }
     </script>
 </body>
 </html>
