@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEESETAKE | Secure Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <header>
+            <h1 class="logo">CHEESETAKE</h1>
+            <p class="tagline">PREMIUM RESERVATIONS</p>
+        </header>
+
+        <div class="order-box">
+            <div class="line-item">
+                <span>RESERVED SEATS</span>
+                <span id="qty">0</span>
+            </div>
+            <div class="line-item total">
+                <span>TOTAL PAYABLE</span>
+                <span>₹<span id="amount">0</span></span>
+            </div>
+        </div>
+
+        <form id="payment-form">
+            <div class="input-field">
+                <label>CARDHOLDER</label>
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            
+            <div class="input-field">
+                <label>CARD NUMBER</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" required>
+            </div>
+
+            <div class="flex-row">
+                <div class="input-field">
+                    <label>EXPIRY</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="input-field">
+                    <label>CVV</label>
+                    <input type="password" placeholder="***" maxlength="3" required>
+                </div>
+            </div>
+
+            <!-- FIXED BUTTON -->
+            <button type="submit" class="pay-button">AUTHORIZE PAYMENT</button>
+        </form>
+
+        <a href="index.html" class="cancel-link">CANCEL TRANSACTION</a>
+    </div>
+
+   <script>
+    // Get data from localStorage
+    const count = localStorage.getItem('selectedCount');
+    const total = localStorage.getItem('totalPrice');
+
+    // Show on page
+    document.getElementById('qty').innerText = count ? count : 0;
+    document.getElementById('amount').innerText = total ? Number(total).toFixed(2) : '0.00';
+
+    // Handle form submit
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const btn = document.querySelector('.pay-button');
+        btn.disabled = true;
+        btn.textContent = "Processing...";
+
+        const freshTotal = document.getElementById('amount').innerText;
+
+        
+        localStorage.removeItem('selectedCount');
+        localStorage.removeItem('totalPrice');
+        localStorage.removeItem('selectedSeats');
+
+        setTimeout(() => {
+            window.location.href = `success.html?total=${freshTotal}`;
+        }, 1500);
+    });
+</script>
+</body>
+</html>

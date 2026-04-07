@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineNoir | Select Your Seats</title>
+    <title>CheeseTake | Select Your Seats</title>
     <link rel="stylesheet" href="seat.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -36,7 +36,7 @@
         <!-- Legend -->
         <div class="legend">
             <div class="item"><div class="seat available"></div> <span>Available</span></div>
-            <div class="item"><div class="seat legend-selected"></div> <span>Selected</span></div> <!-- ✅ changed to legend-selected -->
+            <div class="item"><div class="seat legend-selected"></div> <span>Selected</span></div> 
             <div class="item"><div class="seat occupied"></div> <span>Occupied</span></div>
         </div>
 
@@ -51,7 +51,7 @@
                 <div class="value" id="total">₹0.00</div>
             </div>
             <div class="action-group">
-                <button class="btn btn-primary" onclick="confirmSeats()">Confirm Selection</button>
+                <button class="btn btn-primary" id="proceedBtn" onclick="confirmSeats()">Confirm Selection</button>
             </div>
         </div>
     </main>

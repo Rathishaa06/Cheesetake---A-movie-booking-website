@@ -207,3 +207,39 @@ body {
     background: linear-gradient(to bottom, #ff4d4d, #ffcc00);
     border-radius: 3px;
 }
+.time-slot {
+    background: transparent;
+    color: white;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.time-slot.active {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+.time-slot {
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.time-slot:hover {
+    border-color: #fff;
+}
+
+.time-slot.selected {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    font-weight: bold;
+}

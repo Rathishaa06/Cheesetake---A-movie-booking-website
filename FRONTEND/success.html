@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed | Cheesetake</title>
+    <link rel="stylesheet" href="success.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="check-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+
+        <h1 class="confirmation-title">Booking Confirmed!</h1>
+        <p class="subtitle">Your tickets are on their way to your email</p>
+
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <h2 id="event-name">Cheesetake Live</h2>
+                <p id="event-date">October 24, 2025 • 8:00 PM</p>
+            </div>
+            <div class="ticket-body">
+                <div class="detail-row">
+                    <span class="label">Venue</span>
+                    <span class="val">Cheesetake Arena</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Seats</span>
+                    <div class="seat-badges" id="seats-list">
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="detail-row">
+                    <span class="label">Amount Paid</span>
+                    <span class="val" id="amount-paid">₹0.00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Name</span>
+                    <span class="val" id="user-name">Guest User</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="booking-id">Booking ID: <strong id="b-id">CKQB8FUB2Z</strong></p>
+
+        <div class="button-group">
+            <button class="btn-download">↓ Download Ticket</button>
+            <button class="btn-more" onclick="window.location.href='index.html'">Book More</button>
+        </div>
+    </div>
+
+    <script src="success.js"></script>
+</body>
+</html>
